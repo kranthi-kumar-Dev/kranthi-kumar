@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>game</title>
+        <style>
+            body{
+                background-color: black;
+                border: 20px;
+                border-color: aliceblue;
+                border-width: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                font-size: 60px;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 35px;
+            }
+            .a1{
+                background-color: gray;
+                border-radius: 10px;
+                margin: 13px;
+                width: 70%;
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+            }
+            img{
+                margin-left: 35px;
+                border-radius: 70%;
+                height: 150px;
+                width: 250px;
+            }
+            .input1{
+                width: 200px;
+                height: 75px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-radius: 20px;
+                border-color: gray;
+                border-width: 5px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+            .input2{
+                width: 125px;
+                height: 65px;
+                background-color: green;
+                color: white;
+                border-radius: 35px;
+                position: relative;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            .input2:hover{
+                animation: animate 1s infinite;
+            }
+            .img2{
+                height: 28px;
+                width: 37px;
+                top: 14%;
+                left: 60.5%;
+                position: absolute;
+            }
+            .a2{
+                position: relative;
+            }
+            .img3{
+                position: absolute;
+                width: 30px;
+                height: 20px;
+                top: 19%;
+                left: 74%;
+                font-size: 9px;
+            }
+            .a3{
+                background-color: gray;
+                border-radius: 20px;
+                width: 70%;
+                height: 110px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .lav{
+                height: 50px;
+                width: 180px;
+                border-width: 6px;
+                border-color: black;
+                background-color: white;
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .lav2{
+                height: 50px;
+                width: 180px;
+                border-width: 6px;
+                border-color: black;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                align-items: center;
+            }
+            .instructions-card{
+                background-color:gray;
+                border-radius: 7px;
+                width: 420px;
+                position: relative;
+            }
+            .head{
+                font-size: 25px;
+                text-align: left;
+                color: aquamarine;
+                position: relative;
+                left: 7% ;
+
+            }
+            .instructions{
+                font-size: 15px;
+                color:aliceblue;
+                font-family:cursive;
+                text-align: center;
+                position:relative;
+            }
+
+            @keyframes animate{
+                0%{
+                    border-color: brown;
+                    background-color: black;
+                    color: aliceblue;
+                }
+                50%{
+                    border-color: blue;
+                    background-color: gray;
+                    color: black;
+                }
+                100%{
+                    border-color: black;
+                    background-color: green;
+                    color:aliceblue;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a1">
+            <h1>Random number game</h1>
+            <div class="a2">
+                <img src="data:image/jpeg;base64,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">
+                <img src="data:image/jpeg;base64,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" class="img2">
+                <p class="img3">R</p>
+            </div>
+        </div>
+        <div class="a3">
+            <p type="text" class="lav" id="ans1">guess the number</p>
+            <p type="text" class="lav2" id="ans2">&#129300;</p>
+        </div>
+        <input class="input1" type="number" id="num" />
+        <button class="input2" onclick="myfunction()">submit</button>
+        <p id="random"></p>
+        <div class="instructions-card">
+            <h2 class="head">instructions:</h2>
+            <p class="instructions">
+                1.Guess the random number between 1-100.<br>
+                2.If it shows "too high" the value is too less than that.<br>
+                3.If it shows "too low" the value is too high than that.<br>
+                4.The text "too" refers to difference of value 10.<br>
+                5.The text "just" refers to the difference in between 10.<br>
+                6.If you won the game refresh the page for another try.<br>
+                7.The value changes everytime when page refresh.<br>
+            </p>
+        </div>
+        <script>
+            let x= Math.floor(Math.random() * 100);
+            console.log(x);
+            function myfunction(){
+                let y=document.getElementById("num").value;
+                console.log("y");
+                let z=x-y;
+                if(x==y){
+                    document.getElementById("ans1").innerHTML="you won";
+                    document.getElementById("ans2").innerHTML="&#11088;";
+                }
+                else if( z>=1 && z<=10){
+                    document.getElementById("ans1").innerHTML="its just low re-enter";
+                    document.getElementById("ans2").innerHTML="&#128516;";
+                }
+                else if( z>=-10 && z<=0){
+                    document.getElementById("ans1").innerHTML="its just high re-enter";
+                    document.getElementById("ans2").innerHTML="&#128516;";
+                }
+                else if(x>=y){
+                    document.getElementById("ans1").innerHTML="its too low re-enter";
+                    document.getElementById("ans2").innerHTML="&#10060;";
+                }
+                else{
+                    document.getElementById("ans1").innerHTML="its too high re-enter";
+                    document.getElementById("ans2").innerHTML="&#10060;";
+                }
+            }
+        </script>
+    </body>
+</html> 
